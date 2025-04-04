@@ -24,7 +24,7 @@ jobs:
       - name: Install and Build
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         run: |
-          julia --project=. -e "import Pkg; Pkg.status()"
+          julia --project=. -e "import Pkg; Pkg.instantiate()"
           make render
 
       - name: Deploy preview
