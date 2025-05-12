@@ -486,23 +486,22 @@ Figure&nbsp;3.1: Length of ramus bone versus age for a sample of 20 boys.
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    layout <span class="op">=</span> <span class="op">:</span>Subj <span class="op">=&gt;</span> <span class="fu">sorter</span>(age_8.Subj),</span>
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  ) <span class="op">*</span> (<span class="fu">visual</span>(Scatter, marker <span class="op">=</span> <span class="ch">'∘'</span>, markersize <span class="op">=</span> <span class="fl">20</span>) <span class="op">+</span> <span class="fu">linear</span>(; interval<span class="op">=</span><span class="cn">nothing</span>)) <span class="op">*</span></span>
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">visual</span>(color <span class="op">=</span> <span class="op">:</span>blue)</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="fu">draw</span>(plt, <span class="fu">scales</span>(Layout <span class="op">=</span> (; palette <span class="op">=</span> <span class="fu">vec</span>([(b,a) for a <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, b <span class="kw">in</span> <span class="fl">2</span><span class="op">:-</span><span class="fl">1</span><span class="op">:</span><span class="fl">1</span>])));</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>fg <span class="op">=</span> <span class="fu">draw</span>(plt, <span class="fu">scales</span>(Layout <span class="op">=</span> (; palette <span class="op">=</span> <span class="fu">vec</span>([(b,a) for a <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, b <span class="kw">in</span> <span class="fl">2</span><span class="op">:-</span><span class="fl">1</span><span class="op">:</span><span class="fl">1</span>])));</span>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>         axis <span class="op">=</span> (; aspect <span class="op">=</span> α, xticklabelrotation <span class="op">=</span> <span class="cn">pi</span><span class="op">/</span><span class="fl">2</span>, xticklabelsize <span class="op">=</span> <span class="fl">10</span>),</span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>         figure <span class="op">=</span> (; size<span class="op">=</span>(<span class="fl">800</span>, <span class="fl">600</span>))</span>
 <span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>);</span>
 <span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="fu">current_figure</span>();</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> fg.figure</span>
 <span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="fu">current_figure</span>();</span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="fu">colgap!</span>(f.layout, <span class="fl">0</span>);</span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="fu">rowgap!</span>(f.layout, <span class="fl">5</span>);</span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    print</span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colsize!</span>(f.layout, col, <span class="fu">Aspect</span>(<span class="fl">1</span>, α))</span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="fu">colgap!</span>(f.layout, <span class="fl">0</span>);</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="fu">rowgap!</span>(f.layout, <span class="fl">5</span>);</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    print</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colsize!</span>(f.layout, col, <span class="fu">Aspect</span>(<span class="fl">1</span>, α))</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="fig-eglayout" class="cell-output cell-output-display quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
 <figure class="quarto-float quarto-float-fig figure">
@@ -2048,8 +2047,8 @@ Note
 5. Probably go with `bxm03` in this case, even though it gives a degenerate dist'n of random effects.  The idea is that the random effects are absorbing a form of rat-to-rat variability.  The residual standard deviation does reflect this.</code></pre>
 </div>
 </div>
-<p><em>This page was rendered from git revision <a href="https://github.com/JuliaMixedModels/EmbraceUncertainty/tree/e2f737e
-">e2f737e
+<p><em>This page was rendered from git revision <a href="https://github.com/JuliaMixedModels/EmbraceUncertainty/tree/32f1a7a
+">32f1a7a
 </a> using Quarto 1.7.30.</em></p>
 
 
