@@ -688,13 +688,13 @@ Why StatsAPI.deviance and not just deviance?
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div class="ansi-escaped-output">
 <pre>BenchmarkTools.Trial: 10000 samples with 1 evaluation per sample.
- Range <span class="ansi-bright-black-fg">(</span><span class="ansi-cyan-fg ansi-bold">min</span> … <span class="ansi-magenta-fg">max</span><span class="ansi-bright-black-fg">):  </span><span class="ansi-cyan-fg ansi-bold">39.563 μs</span> … <span class="ansi-magenta-fg">251.999 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>min … max<span class="ansi-bright-black-fg">): </span>0.00% … 0.00%
- Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-blue-fg ansi-bold">median</span><span class="ansi-bright-black-fg">):     </span><span class="ansi-blue-fg ansi-bold">39.824 μs               </span><span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>median<span class="ansi-bright-black-fg">):    </span>0.00%
- Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-green-fg ansi-bold">mean</span> ± <span class="ansi-green-fg">σ</span><span class="ansi-bright-black-fg">):   </span><span class="ansi-green-fg ansi-bold">40.810 μs</span> ± <span class="ansi-green-fg">  5.248 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>mean ± σ<span class="ansi-bright-black-fg">):  </span>0.00% ± 0.00%
+ Range <span class="ansi-bright-black-fg">(</span><span class="ansi-cyan-fg ansi-bold">min</span> … <span class="ansi-magenta-fg">max</span><span class="ansi-bright-black-fg">):  </span><span class="ansi-cyan-fg ansi-bold">40.005 μs</span> … <span class="ansi-magenta-fg">65.243 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>min … max<span class="ansi-bright-black-fg">): </span>0.00% … 0.00%
+ Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-blue-fg ansi-bold">median</span><span class="ansi-bright-black-fg">):     </span><span class="ansi-blue-fg ansi-bold">40.276 μs              </span><span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>median<span class="ansi-bright-black-fg">):    </span>0.00%
+ Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-green-fg ansi-bold">mean</span> ± <span class="ansi-green-fg">σ</span><span class="ansi-bright-black-fg">):   </span><span class="ansi-green-fg ansi-bold">40.676 μs</span> ± <span class="ansi-green-fg"> 1.780 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>mean ± σ<span class="ansi-bright-black-fg">):  </span>0.00% ± 0.00%
 
-  █<span class="ansi-blue-fg">▆</span>▁▂<span class="ansi-green-fg"> </span>                    ▁▂                                  ▁
-  █<span class="ansi-blue-fg">█</span>██<span class="ansi-green-fg">▅</span>▄▅▇▆▄▃▃▄▁▁▄▄▃▁▃▄▃▁▄▅███▆▆▆▆▆▅▆▅▃▅▄▅▃▁▁▃▄▃▁▃▁▁▃▁▃▃▆▇▇█▇█ █
-  39.6 μs<span class="ansi-bright-black-fg">       </span><span class="ansi-bright-black-fg">Histogram: </span><span class="ansi-bright-black-fg ansi-bold">log(</span><span class="ansi-bright-black-fg">frequency</span><span class="ansi-bright-black-fg ansi-bold">)</span><span class="ansi-bright-black-fg"> by time</span>      57.8 μs <span class="ansi-bold">&lt;</span>
+  ▅█<span class="ansi-blue-fg">▇</span>▅▁<span class="ansi-green-fg"> </span>▁▁                                               ▁▁▁  ▂
+  ██<span class="ansi-blue-fg">█</span>██<span class="ansi-green-fg">▇</span>███▇▄▅▃▄▅▆▆▅▄▅▃▄▃▁▃▄▁▁▁▃▁▁▁▃▁▁▃▁▁▁▁▁▁▃▁▃▁▃▃▃▁▃▄▆█████ █
+  40 μs<span class="ansi-bright-black-fg">        </span><span class="ansi-bright-black-fg">Histogram: </span><span class="ansi-bright-black-fg ansi-bold">log(</span><span class="ansi-bright-black-fg">frequency</span><span class="ansi-bright-black-fg ansi-bold">)</span><span class="ansi-bright-black-fg"> by time</span>      48.4 μs <span class="ansi-bold">&lt;</span>
 
  Memory estimate<span class="ansi-bright-black-fg">: </span><span class="ansi-yellow-fg">16 bytes</span>, allocs estimate<span class="ansi-bright-black-fg">: </span><span class="ansi-yellow-fg">1</span>.</pre>
 </div>
@@ -880,14 +880,14 @@ w_i&amp;=\mu_i(1-\mu_i)\\
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@benchmark</span> <span class="fu">deviance</span>(<span class="fu">updateβ!</span>(m)) seconds <span class="op">=</span> <span class="fl">1</span> setup <span class="op">=</span> (m <span class="op">=</span> com05fe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div class="ansi-escaped-output">
-<pre>BenchmarkTools.Trial: 5878 samples with 1 evaluation per sample.
- Range <span class="ansi-bright-black-fg">(</span><span class="ansi-cyan-fg ansi-bold">min</span> … <span class="ansi-magenta-fg">max</span><span class="ansi-bright-black-fg">):  </span><span class="ansi-cyan-fg ansi-bold">159.015 μs</span> … <span class="ansi-magenta-fg">363.035 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>min … max<span class="ansi-bright-black-fg">): </span>0.00% … 0.00%
- Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-blue-fg ansi-bold">median</span><span class="ansi-bright-black-fg">):     </span><span class="ansi-blue-fg ansi-bold">166.129 μs               </span><span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>median<span class="ansi-bright-black-fg">):    </span>0.00%
- Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-green-fg ansi-bold">mean</span> ± <span class="ansi-green-fg">σ</span><span class="ansi-bright-black-fg">):   </span><span class="ansi-green-fg ansi-bold">167.866 μs</span> ± <span class="ansi-green-fg">  9.027 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>mean ± σ<span class="ansi-bright-black-fg">):  </span>0.00% ± 0.00%
+<pre>BenchmarkTools.Trial: 5808 samples with 1 evaluation per sample.
+ Range <span class="ansi-bright-black-fg">(</span><span class="ansi-cyan-fg ansi-bold">min</span> … <span class="ansi-magenta-fg">max</span><span class="ansi-bright-black-fg">):  </span><span class="ansi-cyan-fg ansi-bold">158.668 μs</span> … <span class="ansi-magenta-fg">  4.890 ms</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>min … max<span class="ansi-bright-black-fg">): </span>0.00% … 0.00%
+ Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-blue-fg ansi-bold">median</span><span class="ansi-bright-black-fg">):     </span><span class="ansi-blue-fg ansi-bold">165.811 μs               </span><span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>median<span class="ansi-bright-black-fg">):    </span>0.00%
+ Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-green-fg ansi-bold">mean</span> ± <span class="ansi-green-fg">σ</span><span class="ansi-bright-black-fg">):   </span><span class="ansi-green-fg ansi-bold">170.040 μs</span> ± <span class="ansi-green-fg">114.283 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>mean ± σ<span class="ansi-bright-black-fg">):  </span>0.00% ± 0.00%
 
-          █<span class="ansi-blue-fg"> </span> <span class="ansi-green-fg"> </span>                                                   
-  █▇▃▂▂▂▆▅█<span class="ansi-blue-fg">▆</span>▆<span class="ansi-green-fg">▅</span>▅▃▃▂▂▂▃▃▄▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▁▂▂▁▂▂▂▂▁▁▂▂▂▂▂▂▂▂▂▂▂▂▁▂ ▃
-  159 μs<span class="ansi-bright-black-fg">           Histogram: frequency by time</span>          209 μs <span class="ansi-bold">&lt;</span>
+  ▆▃      <span class="ansi-blue-fg">█</span>    <span class="ansi-green-fg"> </span>                                                 
+  ██▄▃▂▂▆▇<span class="ansi-blue-fg">█</span>▇▆▇▆<span class="ansi-green-fg">▄</span>▃▂▂▃▃▄▃▃▃▃▂▂▂▂▂▂▂▂▂▁▂▂▂▂▂▂▁▂▂▂▂▂▂▂▂▁▁▂▂▁▁▁▂▂▂▂▂ ▃
+  159 μs<span class="ansi-bright-black-fg">           Histogram: frequency by time</span>          211 μs <span class="ansi-bold">&lt;</span>
 
  Memory estimate<span class="ansi-bright-black-fg">: </span><span class="ansi-yellow-fg">16.02 KiB</span>, allocs estimate<span class="ansi-bright-black-fg">: </span><span class="ansi-yellow-fg">9</span>.</pre>
 </div>
@@ -1123,14 +1123,14 @@ Why are θ and β stored in a single vector?
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="pp">@benchmark</span> <span class="fu">pirls!</span>(mm) seconds <span class="op">=</span> <span class="fl">1</span> setup <span class="op">=</span> (mm <span class="op">=</span> m)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div class="ansi-escaped-output">
-<pre>BenchmarkTools.Trial: 2575 samples with 1 evaluation per sample.
- Range <span class="ansi-bright-black-fg">(</span><span class="ansi-cyan-fg ansi-bold">min</span> … <span class="ansi-magenta-fg">max</span><span class="ansi-bright-black-fg">):  </span><span class="ansi-cyan-fg ansi-bold">379.586 μs</span> … <span class="ansi-magenta-fg">512.542 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>min … max<span class="ansi-bright-black-fg">): </span>0.00% … 0.00%
- Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-blue-fg ansi-bold">median</span><span class="ansi-bright-black-fg">):     </span><span class="ansi-blue-fg ansi-bold">382.502 μs               </span><span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>median<span class="ansi-bright-black-fg">):    </span>0.00%
- Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-green-fg ansi-bold">mean</span> ± <span class="ansi-green-fg">σ</span><span class="ansi-bright-black-fg">):   </span><span class="ansi-green-fg ansi-bold">386.751 μs</span> ± <span class="ansi-green-fg"> 12.142 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>mean ± σ<span class="ansi-bright-black-fg">):  </span>0.00% ± 0.00%
+<pre>BenchmarkTools.Trial: 3282 samples with 1 evaluation per sample.
+ Range <span class="ansi-bright-black-fg">(</span><span class="ansi-cyan-fg ansi-bold">min</span> … <span class="ansi-magenta-fg">max</span><span class="ansi-bright-black-fg">):  </span><span class="ansi-cyan-fg ansi-bold">297.368 μs</span> … <span class="ansi-magenta-fg">429.110 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>min … max<span class="ansi-bright-black-fg">): </span>0.00% … 0.00%
+ Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-blue-fg ansi-bold">median</span><span class="ansi-bright-black-fg">):     </span><span class="ansi-blue-fg ansi-bold">299.337 μs               </span><span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>median<span class="ansi-bright-black-fg">):    </span>0.00%
+ Time  <span class="ansi-bright-black-fg">(</span><span class="ansi-green-fg ansi-bold">mean</span> ± <span class="ansi-green-fg">σ</span><span class="ansi-bright-black-fg">):   </span><span class="ansi-green-fg ansi-bold">303.114 μs</span> ± <span class="ansi-green-fg"> 11.944 μs</span>  <span class="ansi-bright-black-fg">┊</span> GC <span class="ansi-bright-black-fg">(</span>mean ± σ<span class="ansi-bright-black-fg">):  </span>0.00% ± 0.00%
 
-  ▅█<span class="ansi-blue-fg">▆</span>▁ <span class="ansi-green-fg"> </span>▅▆▄▁                                                    ▁
-  ██<span class="ansi-blue-fg">█</span>█▃<span class="ansi-green-fg">▇</span>████▇██▄▅▃▃▅▆▃▄▃▆▁▃▁▁▁▃▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▃▄▄▅▄▅▃▅▃▄▄▆ █
-  380 μs<span class="ansi-bright-black-fg">        </span><span class="ansi-bright-black-fg">Histogram: </span><span class="ansi-bright-black-fg ansi-bold">log(</span><span class="ansi-bright-black-fg">frequency</span><span class="ansi-bright-black-fg ansi-bold">)</span><span class="ansi-bright-black-fg"> by time</span>        461 μs <span class="ansi-bold">&lt;</span>
+  █<span class="ansi-blue-fg">▇</span>▃ <span class="ansi-green-fg"> </span>▆▅▂▁                                                     ▁
+  █<span class="ansi-blue-fg">█</span>█▇<span class="ansi-green-fg">▆</span>████▇█▇▇▆▇▆▆▄▆▃▆▄▃▁▄▃▁▃▁▄▁▃▁▁▃▁▃▁▁▁▁▁▁▁▁▃▁▁▁▁▁▁▁▁▁▃▁▁▁▁▅ █
+  297 μs<span class="ansi-bright-black-fg">        </span><span class="ansi-bright-black-fg">Histogram: </span><span class="ansi-bright-black-fg ansi-bold">log(</span><span class="ansi-bright-black-fg">frequency</span><span class="ansi-bright-black-fg ansi-bold">)</span><span class="ansi-bright-black-fg"> by time</span>        392 μs <span class="ansi-bold">&lt;</span>
 
  Memory estimate<span class="ansi-bright-black-fg">: </span><span class="ansi-yellow-fg">112 bytes</span>, allocs estimate<span class="ansi-bright-black-fg">: </span><span class="ansi-yellow-fg">1</span>.</pre>
 </div>
@@ -1760,8 +1760,8 @@ f_j(z_j)=\exp{\left(\frac{\tilde{d}_j(z_j/\ell_j+\tilde{u}_j)-\tilde{d}_j(\tilde
  -0.0056246062539383156</code></pre>
 </div>
 </div>
-<p><em>This page was rendered from git revision <a href="https://github.com/JuliaMixedModels/EmbraceUncertainty/tree/32f1a7a
-">32f1a7a
+<p><em>This page was rendered from git revision <a href="https://github.com/JuliaMixedModels/EmbraceUncertainty/tree/235cddb
+">235cddb
 </a> using Quarto 1.7.30.</em></p>
 
 
